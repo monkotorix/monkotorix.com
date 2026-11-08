@@ -3,10 +3,11 @@
 #
 #   ./build-game.sh neurocrew        # Monko Focus     <- ../neurocrew       (or $NEUROCREW_DIR)
 #   ./build-game.sh lezen-met-olli   # Monko Reads     <- ../monkoreads      (or $MONKOREADS_DIR)
-#   ./build-game.sh all              # both
+#   ./build-game.sh monko-letters    # Monko Letters   <- ../monkoletters    (or $MONKOLETTERS_DIR)
+#   ./build-game.sh all              # all three
 #
 # Run this whenever a game changes and you want the website copy updated.
-# Both games build with a RELATIVE base (vite.config.ts: base: './'), so they work
+# All games build with a RELATIVE base (vite.config.ts: base: './'), so they work
 # under /games/<slug>/ as-is and need no path patching. The game checkout is copied
 # to a temp dir and built there, so the game repos (their node_modules and dist/)
 # are left untouched. The only things changed in the built game's index.html are the
@@ -90,7 +91,7 @@ manifest = os.path.join(out, "manifest.webmanifest")
 if os.path.exists(manifest):
     m = json.load(open(manifest, encoding="utf-8"))
     m["name"] = page_title
-    m["description"] = desc.split(" No accounts")[0]
+    m["description"] = re.split(r" (?:No accounts|Geen account)", desc)[0]
     json.dump(m, open(manifest, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 PY
 
@@ -118,9 +119,19 @@ build_lezen_met_olli() {
     "og-lezen-met-olli.jpg"
 }
 
+build_monko_letters() {
+  build monko-letters \
+    "${MONKOLETTERS_DIR:-$ROOT/../monkoletters}" \
+    "Monko Letters – schrijven met je vinger" \
+    "Monko Letters (bèta) — speel in je browser" \
+    "Een rustig Nederlands spel: letters en woordjes schrijven met je vinger, met Stip het lieveheersbeestje. Geen account, geen reclame, geen tracking. Een Monkotorix bèta." \
+    "og-monko-letters.jpg"
+}
+
 case "${1:-all}" in
   neurocrew) build_neurocrew ;;
   lezen-met-olli) build_lezen_met_olli ;;
-  all) build_neurocrew; build_lezen_met_olli ;;
-  *) echo "usage: $0 [neurocrew|lezen-met-olli|all]" >&2; exit 2 ;;
+  monko-letters) build_monko_letters ;;
+  all) build_neurocrew; build_lezen_met_olli; build_monko_letters ;;
+  *) echo "usage: $0 [neurocrew|lezen-met-olli|monko-letters|all]" >&2; exit 2 ;;
 esac

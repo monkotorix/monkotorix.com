@@ -1,0 +1,35 @@
+{
+  "name": "Monko Letters – schrijven met je vinger",
+  "short_name": "MonkoLetters",
+  "description": "Een rustig Nederlands spel: letters en woordjes schrijven met je vinger, met Stip het lieveheersbeestje.",
+  "lang": "nl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#e0f2fe",
+  "theme_color": "#e0f2fe",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

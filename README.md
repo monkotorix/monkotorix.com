@@ -38,9 +38,10 @@ served from the same site under `/games/<game>/`, and zero third-party requests.
 | `site/assets/` | Self-hosted fonts (Fraunces, Inter), icons, game screenshots and social-preview images. |
 | `site/games/neurocrew/` | **Monko Focus** (beta, formerly NeuroCrew), built from `../neurocrew`. The URL keeps the old slug so existing installs and saved progress carry over. |
 | `site/games/lezen-met-olli/` | **Monko Reads** (beta, formerly Lezen met Olli), built from `../monkoreads` ([monkotorix/monkoreads](https://github.com/monkotorix/monkoreads)). The URL keeps the old slug so existing links and installs keep working. |
-| `site/privacy/` | Privacy notice for the website and both games. |
+| `site/games/monko-letters/` | **Monko Letters** (beta), built from `../monkoletters` ([monkotorix/monkoletters](https://github.com/monkotorix/monkoletters)). |
+| `site/privacy/` | Privacy notice for the website and the games. |
 | `site/404.html`, `robots.txt`, `sitemap.xml`, `.nojekyll` | Hosting files. |
-| `build-game.sh` | Rebuilds one or both games into `site/games/`. |
+| `build-game.sh` | Rebuilds one game or all of them into `site/games/`. |
 | `tools/locks/` | The exact dependency versions each game was built with (the game repos have no lockfile of their own). |
 | `tools/hero_scene.py` | Draws the hero illustration (a cove at sunrise with a winding path of six coloured stops). |
 | `tools/inject_hero.py` | Writes the hero illustration into `site/index.html` between its `hero-sky` / `hero-land` markers. |
@@ -65,12 +66,13 @@ still), and `prefers-reduced-motion` turns off even that.
 ## Updating the games
 
 ```bash
-./build-game.sh             # both games
+./build-game.sh             # all games
 ./build-game.sh neurocrew
 ./build-game.sh lezen-met-olli
+./build-game.sh monko-letters
 ```
 
-The script copies the sibling game checkout (or `$NEUROCREW_DIR` / `$MONKOREADS_DIR`) to a temp
+The script copies the sibling game checkout (or `$NEUROCREW_DIR` / `$MONKOREADS_DIR` / `$MONKOLETTERS_DIR`) to a temp
 dir, installs and builds it there, removes hosting files that only apply at a site root, adds the
 site's Content-Security-Policy, canonical URL and social-preview tags to the game's `index.html`,
 and swaps the result into `site/games/<game>/`. The game repos themselves are not touched.
@@ -80,10 +82,10 @@ are reproducible. To pick up newer dependency versions, delete that lockfile and
 is recorded. If a game’s `package.json` changes, `npm ci` stops with “not in sync”: delete
 `tools/locks/<game>.package-lock.json` and rebuild to record a new one.
 
-Both games build with a relative base (`base: './'`), so they work under `/games/<game>/` without
+All games build with a relative base (`base: './'`), so they work under `/games/<game>/` without
 path patching. They share this origin's `localStorage` without clashing: Monko Focus uses
 `coordination-games:settings`, Monko Reads uses `monkoreads` (it moves progress saved under its old
-key, `lezen-met-olli`, there on first open), and the site uses
+key, `lezen-met-olli`, there on first open), Monko Letters uses `monkoletters`, and the site uses
 `monkotorix-theme`. **Keep the game URLs stable** — progress is stored per address, so moving a
 game resets children's progress.
 
