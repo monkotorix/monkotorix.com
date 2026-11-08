@@ -37,7 +37,7 @@ served from the same site under `/games/<game>/`, and zero third-party requests.
 | `site/assets/site.js` | The only script: the light/dark theme switch (follows the system until a visitor picks a theme). |
 | `site/assets/` | Self-hosted fonts (Fraunces, Inter), icons, game screenshots and social-preview images. |
 | `site/games/neurocrew/` | **Monko Focus** (beta, formerly NeuroCrew), built from `../neurocrew`. The URL keeps the old slug so existing installs and saved progress carry over. |
-| `site/games/lezen-met-olli/` | **Lezen met Olli** (beta), built from `../lezenmetollie`. |
+| `site/games/lezen-met-olli/` | **Monko Reads** (beta, formerly Lezen met Olli), built from `../monkoreads` ([monkotorix/monkoreads](https://github.com/monkotorix/monkoreads)). The URL keeps the old slug so existing links and installs keep working. |
 | `site/privacy/` | Privacy notice for the website and both games. |
 | `site/404.html`, `robots.txt`, `sitemap.xml`, `.nojekyll` | Hosting files. |
 | `build-game.sh` | Rebuilds one or both games into `site/games/`. |
@@ -70,7 +70,7 @@ still), and `prefers-reduced-motion` turns off even that.
 ./build-game.sh lezen-met-olli
 ```
 
-The script copies the sibling game checkout (or `$NEUROCREW_DIR` / `$LEZENMETOLLI_DIR`) to a temp
+The script copies the sibling game checkout (or `$NEUROCREW_DIR` / `$MONKOREADS_DIR`) to a temp
 dir, installs and builds it there, removes hosting files that only apply at a site root, adds the
 site's Content-Security-Policy, canonical URL and social-preview tags to the game's `index.html`,
 and swaps the result into `site/games/<game>/`. The game repos themselves are not touched.
@@ -82,7 +82,8 @@ is recorded. If a game’s `package.json` changes, `npm ci` stops with “not in
 
 Both games build with a relative base (`base: './'`), so they work under `/games/<game>/` without
 path patching. They share this origin's `localStorage` without clashing: Monko Focus uses
-`coordination-games:settings`, Lezen met Olli uses `lezen-met-olli`, and the site uses
+`coordination-games:settings`, Monko Reads uses `monkoreads` (it moves progress saved under its old
+key, `lezen-met-olli`, there on first open), and the site uses
 `monkotorix-theme`. **Keep the game URLs stable** — progress is stored per address, so moving a
 game resets children's progress.
 

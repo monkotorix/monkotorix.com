@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-  <path d="M10 14 L13 3 L20 11 Z M38 14 L35 3 L28 11 Z" fill="#7a4e24"/>
-  <ellipse cx="24" cy="27" rx="17" ry="19" fill="#a8713a"/>
-  <ellipse cx="24" cy="34" rx="10" ry="10" fill="#f3d9a8"/>
-  <circle cx="17.5" cy="21" r="7" fill="#f6e7c8"/>
-  <circle cx="30.5" cy="21" r="7" fill="#f6e7c8"/>
-  <circle cx="17.5" cy="21" r="4.6" fill="#fff"/>
-  <circle cx="30.5" cy="21" r="4.6" fill="#fff"/>
-  <circle cx="18" cy="21.5" r="2.4" fill="#2b2420"/>
-  <circle cx="31" cy="21.5" r="2.4" fill="#2b2420"/>
-  <path d="M21.5 26 L26.5 26 L24 30 Z" fill="#f59e0b"/>
+  <circle cx="24" cy="24" r="24" fill="#FBF7F0"/>
+  <path d="M9 17 L11 5 L19 12 Z M39 17 L37 5 L29 12 Z" fill="#A87A5C"/>
+  <ellipse cx="24" cy="27" rx="18" ry="18" fill="#B98563"/>
+  <circle cx="17.5" cy="23" r="7.2" fill="#F6EEE2"/>
+  <circle cx="30.5" cy="23" r="7.2" fill="#F6EEE2"/>
+  <circle cx="18" cy="23.5" r="3" fill="#3B3A36"/>
+  <circle cx="31" cy="23.5" r="3" fill="#3B3A36"/>
+  <path d="M21.5 29.5 Q24 28.3 26.5 29.5 L24 34 Z" fill="#E1AE4A"/>
+  <circle cx="10.5" cy="31" r="2.6" fill="#E0A595"/>
+  <circle cx="37.5" cy="31" r="2.6" fill="#E0A595"/>
 </svg>

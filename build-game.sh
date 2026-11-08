@@ -2,7 +2,7 @@
 # Rebuild one beta game into site/games/<slug>/.
 #
 #   ./build-game.sh neurocrew        # Monko Focus     <- ../neurocrew       (or $NEUROCREW_DIR)
-#   ./build-game.sh lezen-met-olli   # Lezen met Olli  <- ../lezenmetollie   (or $LEZENMETOLLI_DIR)
+#   ./build-game.sh lezen-met-olli   # Monko Reads     <- ../monkoreads      (or $MONKOREADS_DIR)
 #   ./build-game.sh all              # both
 #
 # Run this whenever a game changes and you want the website copy updated.
@@ -111,9 +111,9 @@ build_neurocrew() {
 
 build_lezen_met_olli() {
   build lezen-met-olli \
-    "${LEZENMETOLLI_DIR:-$ROOT/../lezenmetollie}" \
-    "Lezen met Olli" \
-    "Lezen met Olli (bèta) — speel in je browser" \
+    "${MONKOREADS_DIR:-$ROOT/../monkoreads}" \
+    "Monko Reads" \
+    "Monko Reads (bèta) — speel in je browser" \
     "Een vrolijk Nederlands spel met letters, klanken en woorden, met Olli de uil. Geen account, geen reclame, geen tracking. Een Monkotorix bèta." \
     "og-lezen-met-olli.jpg"
 }
