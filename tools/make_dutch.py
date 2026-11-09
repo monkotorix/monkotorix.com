@@ -135,7 +135,7 @@ HOME = [
     ("<li>No timers to race against</li>", "<li>Geen tijdsdruk</li>"),
     ("<li>Bold text with wide letter spacing</li>", "<li>Vette letters met veel ruimte ertussen</li>"),
     ('<li>Sound groups always stay together, like <span lang="nl">“aa”</span> and <span lang="nl">“oe”</span> in Dutch or “sh” and “ee” in English</li>',
-     '<li>Klankgroepen blijven altijd bij elkaar, zoals “aa” en “oe” in het Nederlands of <span lang="en">“sh”</span> en <span lang="en">“ee”</span> in het Engels</li>'),
+     '<li>Lange klanken en tweetekenklanken blijven altijd bij elkaar, zoals “aa” en “oe” in het Nederlands of <span lang="en">“sh”</span> en <span lang="en">“ee”</span> in het Engels</li>'),
     ("<li>Olli reads everything aloud in his own recorded voice, in English and in Dutch</li>",
      "<li>Olli leest alles voor met zijn eigen opgenomen stem, in het Nederlands en in het Engels</li>"),
     ("Play Monko Reads</a>", "Speel Monko Reads</a>"),
