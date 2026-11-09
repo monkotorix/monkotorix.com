@@ -4,7 +4,8 @@
 #   ./build-game.sh neurocrew        # Monko Focus     <- ../neurocrew       (or $NEUROCREW_DIR)
 #   ./build-game.sh lezen-met-olli   # Monko Reads     <- ../monkoreads      (or $MONKOREADS_DIR)
 #   ./build-game.sh monko-letters    # Monko Letters   <- ../monkoletters    (or $MONKOLETTERS_DIR)
-#   ./build-game.sh all              # all three
+#   ./build-game.sh monko-quest      # Monko Quest     <- ../monkoquest      (or $MONKOQUEST_DIR)
+#   ./build-game.sh all              # all four
 #
 # Run this whenever a game changes and you want the website copy updated.
 # All games build with a RELATIVE base (vite.config.ts: base: './'), so they work
@@ -49,8 +50,10 @@ build() (
       mkdir -p "$ROOT/tools/locks"
       cp package-lock.json "$lock"
     fi
-    # The flags land on the `vite build` at the end of the package's build script.
-    npm run build -- --outDir "$tmp/out" --emptyOutDir
+    # The flags land on the `vite build` at the end of the package's build script. `--base ./`
+    # makes every asset path relative, so a game works under /games/<slug>/ even when its own
+    # vite.config.ts does not set `base: './'` (Monko Quest).
+    npm run build -- --outDir "$tmp/out" --emptyOutDir --base ./
   )
 
   # Hosting files for other platforms (Netlify, IIS, Azure, Apache) only apply at a
@@ -83,7 +86,10 @@ assert n == 1, "<title> not found in built index.html"
 # The site's own wording describes what children do in the game, so it replaces the
 # game's description too (search results show this one).
 page, n = re.subn(r'<meta name="description" content="[^"]*"', f'<meta name="description" content="{esc(desc)}"', page, count=1)
-assert n == 1, "meta description not found in built index.html"
+if n == 0:
+    # A game without a description of its own (Monko Quest) gets the site's, right after the title.
+    title_tag = f"<title>{esc(page_title)}</title>"
+    page = page.replace(title_tag, f'{title_tag}\n    <meta name="description" content="{esc(desc)}" />', 1)
 open(path, "w", encoding="utf-8").write(page)
 
 # The install prompt shows the manifest's name and description: keep them in line with the site.
@@ -128,10 +134,20 @@ build_monko_letters() {
     "og-monko-letters.jpg"
 }
 
+build_monko_quest() {
+  build monko-quest \
+    "${MONKOQUEST_DIR:-$ROOT/../monkoquest}" \
+    "Monko Quest – Space puzzles with Monko the rocket" \
+    "Monko Quest (beta) — play in your browser" \
+    "A calm space game for children aged about 6 to 9: fly Monko the rocket to five planets, pick tools, make a plan and try it. In English and Dutch. No accounts, no ads, no tracking. A Monkotorix beta." \
+    "og-monko-quest.jpg"
+}
+
 case "${1:-all}" in
   neurocrew) build_neurocrew ;;
   lezen-met-olli) build_lezen_met_olli ;;
   monko-letters) build_monko_letters ;;
-  all) build_neurocrew; build_lezen_met_olli; build_monko_letters ;;
-  *) echo "usage: $0 [neurocrew|lezen-met-olli|monko-letters|all]" >&2; exit 2 ;;
+  monko-quest) build_monko_quest ;;
+  all) build_neurocrew; build_lezen_met_olli; build_monko_letters; build_monko_quest ;;
+  *) echo "usage: $0 [neurocrew|lezen-met-olli|monko-letters|monko-quest|all]" >&2; exit 2 ;;
 esac

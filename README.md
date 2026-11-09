@@ -39,6 +39,7 @@ served from the same site under `/games/<game>/`, and zero third-party requests.
 | `site/games/neurocrew/` | **Monko Focus** (beta, formerly NeuroCrew), built from `../neurocrew`. The URL keeps the old slug so existing installs and saved progress carry over. |
 | `site/games/lezen-met-olli/` | **Monko Reads** (beta, formerly Lezen met Olli), built from `../monkoreads` ([monkotorix/monkoreads](https://github.com/monkotorix/monkoreads)). The URL keeps the old slug so existing links and installs keep working. |
 | `site/games/monko-letters/` | **Monko Letters** (beta), built from `../monkoletters` ([monkotorix/monkoletters](https://github.com/monkotorix/monkoletters)). |
+| `site/games/monko-quest/` | **Monko Quest** (beta), built from `../monkoquest` ([monkotorix/monkoquest](https://github.com/monkotorix/monkoquest)). It is played sideways, so its panel uses the wide `.game-shot.wide` frame and a 1180×820 screenshot. |
 | `site/privacy/` | Privacy notice for the website and the games. |
 | `site/404.html`, `robots.txt`, `sitemap.xml`, `.nojekyll` | Hosting files. |
 | `build-game.sh` | Rebuilds one game or all of them into `site/games/`. |
@@ -70,9 +71,10 @@ still), and `prefers-reduced-motion` turns off even that.
 ./build-game.sh neurocrew
 ./build-game.sh lezen-met-olli
 ./build-game.sh monko-letters
+./build-game.sh monko-quest
 ```
 
-The script copies the sibling game checkout (or `$NEUROCREW_DIR` / `$MONKOREADS_DIR` / `$MONKOLETTERS_DIR`) to a temp
+The script copies the sibling game checkout (or `$NEUROCREW_DIR` / `$MONKOREADS_DIR` / `$MONKOLETTERS_DIR` / `$MONKOQUEST_DIR`) to a temp
 dir, installs and builds it there, removes hosting files that only apply at a site root, adds the
 site's Content-Security-Policy, canonical URL and social-preview tags to the game's `index.html`,
 and swaps the result into `site/games/<game>/`. The game repos themselves are not touched.
@@ -82,10 +84,10 @@ are reproducible. To pick up newer dependency versions, delete that lockfile and
 is recorded. If a game’s `package.json` changes, `npm ci` stops with “not in sync”: delete
 `tools/locks/<game>.package-lock.json` and rebuild to record a new one.
 
-All games build with a relative base (`base: './'`), so they work under `/games/<game>/` without
-path patching. They share this origin's `localStorage` without clashing: Monko Focus uses
+All games build with a relative base (`base: './'`, and the script passes `--base ./` for games that
+don't set it), so they work under `/games/<game>/` without path patching. They share this origin's `localStorage` without clashing: Monko Focus uses
 `coordination-games:settings`, Monko Reads uses `monkoreads` (it moves progress saved under its old
-key, `lezen-met-olli`, there on first open), Monko Letters uses `monkoletters`, and the site uses
+key, `lezen-met-olli`, there on first open), Monko Letters uses `monkoletters`, Monko Quest uses `monkoquest`, and the site uses
 `monkotorix-theme`. **Keep the game URLs stable** — progress is stored per address, so moving a
 game resets children's progress.
 
