@@ -46,6 +46,8 @@ served from the same site under `/games/<game>/`, and zero third-party requests.
 | `tools/locks/` | The exact dependency versions each game was built with (the game repos have no lockfile of their own). |
 | `tools/hero_scene.py` | Draws the hero illustration (a cove at sunrise with a winding path of six coloured stops). |
 | `tools/inject_hero.py` | Writes the hero illustration into `site/index.html` between its `hero-sky` / `hero-land` markers. |
+| `site/nl/` | The Dutch pages (`/nl/` and `/nl/privacy/`), **generated** by `tools/make_dutch.py`. Never edit them by hand. |
+| `tools/make_dutch.py` | Writes `site/nl/` from the English pages, with every English text paired with its Dutch translation. |
 | `brand/` | Brand assets that are not part of the site: the emblem as SVG (`emblem.svg`, for large sizes) and PNG (512, 1024 and 2048 px; the 1024 px one is the GitHub organisation logo), and the 1536×1024 card image for the Sofmon portfolio. |
 
 ## Design
@@ -91,12 +93,37 @@ key, `lezen-met-olli`, there on first open), Monko Letters uses `monkoletters`, 
 `monkotorix-theme`. **Keep the game URLs stable** — progress is stored per address, so moving a
 game resets children's progress.
 
+## Dutch pages
+
+The site is in English (`/`, `/privacy/`) and Dutch (`/nl/`, `/nl/privacy/`). A small **NL** / **EN**
+pill beside the theme switch, a link in the footer and one at the top of the privacy notice switch
+between the two, and `hreflang` links tell search engines which page is which language.
+
+The English pages are the source. `tools/make_dutch.py` copies them, swaps every English text for its
+Dutch translation and writes `site/nl/`, so the styles, the hero illustration and the icons stay
+shared. **After changing any English text, run:**
+
+```bash
+python3 tools/make_dutch.py
+```
+
+If an English text changed, the script stops and names it: update that pair (in both languages) in
+the script and run it again. The wording rules above apply to the Dutch too. Dutch copy uses the
+games' own Dutch names for what parents see in them (*Volwassenenhoek*, *Profiel verwijderen*,
+*Geluid en stem*, *Rustige stand*…), informal *je*, and *spelletjes* for the games.
+
+The Dutch home page shows Dutch screenshots where the English ones contain English words
+(`neurocrew-nl.webp`, `monko-quest-nl.webp`) and its own social-preview image (`og-nl.jpg`). The
+404 page is shared, so it says everything in both languages, and `site.js` gives the theme switch a
+Dutch tooltip on pages with `lang="nl"`.
+
 ## Updating the hero illustration
 
 Edit `tools/hero_scene.py`, then:
 
 ```bash
 python3 tools/inject_hero.py
+python3 tools/make_dutch.py   # the Dutch page shares the illustration
 ```
 
 The scene is two inline SVGs (`hero-sky` for clouds and stars, `hero-land` for the landscape)

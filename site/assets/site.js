@@ -21,7 +21,11 @@
     if (!btn) return;
     var dark = root.getAttribute('data-theme') === 'dark';
     btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
-    btn.setAttribute('title', (dark ? 'Switch to light theme' : 'Switch to dark theme') + ' (remembered on this device)');
+    // The Dutch pages (lang="nl") get the tooltip in Dutch.
+    var nl = (root.getAttribute('lang') || '').toLowerCase().indexOf('nl') === 0;
+    btn.setAttribute('title', nl
+      ? (dark ? 'Overschakelen naar het lichte thema' : 'Overschakelen naar het donkere thema') + ' (wordt op dit apparaat onthouden)'
+      : (dark ? 'Switch to light theme' : 'Switch to dark theme') + ' (remembered on this device)');
   }
 
   root.setAttribute('data-theme', picked() || (mq.matches ? 'dark' : 'light'));

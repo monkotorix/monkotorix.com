@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Off the path — Monkotorix</title>
+  <title>Off the path · Van het pad af — Monkotorix</title>
   <meta name="robots" content="noindex">
   <meta name="color-scheme" content="light dark">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -19,10 +19,13 @@
     *{margin:0;padding:0;box-sizing:border-box}
     body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;min-height:100svh;display:grid;place-items:center;text-align:center;padding:2rem;line-height:1.6}
     svg{width:4.5rem;height:4.5rem;margin:0 auto 1.5rem}
-    h1{text-wrap:balance;font-family:'Fraunces',Georgia,serif;font-variation-settings:"SOFT" 100;font-weight:650;font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.15;margin-bottom:.75rem}
+    h1,h2{text-wrap:balance;font-family:'Fraunces',Georgia,serif;font-variation-settings:"SOFT" 100;font-weight:650;font-size:clamp(1.8rem,5vw,2.6rem);line-height:1.15;margin-bottom:.75rem}
     p{color:var(--muted);margin-bottom:2rem;max-width:34ch;margin-inline:auto}
     a{display:inline-block;border-radius:999px;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:600;padding:.85rem 1.6rem}
     a:focus-visible{outline:3px solid var(--text);outline-offset:3px}
+    /* One 404 page serves both languages: the Dutch text follows the English. */
+    .nl{margin-top:2.75rem;padding-top:2.25rem;border-top:1px solid color-mix(in srgb,var(--muted) 35%,transparent)}
+    .nl h2{font-size:clamp(1.4rem,4vw,1.9rem)}
   </style>
 </head>
 <body>
@@ -31,6 +34,11 @@
     <h1>This step isn’t on the path</h1>
     <p>The page you were looking for has wandered off. Every path has a few detours — let’s head back.</p>
     <a href="/">Back to Monkotorix</a>
+    <div class="nl" lang="nl">
+      <h2>Deze stap staat niet op het pad</h2>
+      <p>De pagina die je zocht, is afgedwaald. Op elk pad maak je weleens een omweg — laten we teruggaan.</p>
+      <a href="/nl/">Terug naar Monkotorix</a>
+    </div>
   </main>
 </body>
 </html>

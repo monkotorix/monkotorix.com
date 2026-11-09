@@ -6,6 +6,9 @@
   <title>Monkotorix — Different Minds. Endless Possibilities.</title>
   <meta name="description" content="Small games with movement, puzzles, letters and numbers, made by parents for their own neurodivergent children and shared with other families.">
   <link rel="canonical" href="https://monkotorix.com/">
+  <link rel="alternate" hreflang="en" href="https://monkotorix.com/">
+  <link rel="alternate" hreflang="nl" href="https://monkotorix.com/nl/">
+  <link rel="alternate" hreflang="x-default" href="https://monkotorix.com/">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="color-scheme" content="light dark">
@@ -172,6 +175,13 @@
     .theme-toggle .i-sun{display:none}
     :root[data-theme="dark"] .theme-toggle .i-sun{display:block}
     :root[data-theme="dark"] .theme-toggle .i-moon{display:none}
+    /* The other language of the page (NL on the English site, EN on the Dutch one), beside the theme switch. */
+    .lang-switch{
+      height:2.75rem;min-width:2.75rem;display:inline-flex;align-items:center;justify-content:center;padding:0 .85rem;flex:none;
+      border-radius:999px;border:1px solid var(--line-strong);background:color-mix(in srgb,var(--surface) 70%,transparent);
+      color:var(--text);text-decoration:none;font-size:.85rem;font-weight:600;letter-spacing:.08em;box-shadow:var(--shadow);transition:background-color .15s ease;
+    }
+    .lang-switch:hover{background:var(--surface)}
 
     .hero-inner{
       position:relative;z-index:2;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -364,7 +374,7 @@
     .site-footer :focus-visible{outline-color:var(--band-accent)}
 
     @media print{
-      .hero-land,.hero-sky,.theme-toggle,.nav-links{display:none}
+      .hero-land,.hero-sky,.theme-toggle,.lang-switch,.nav-links{display:none}
       .hero{min-height:0}
     }
   </style>
@@ -412,6 +422,7 @@
         <li><a href="#games">Games</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <a class="lang-switch" href="/nl/" hreflang="nl" lang="nl" aria-label="Nederlands" title="Deze website in het Nederlands">NL</a>
       <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Dark theme" aria-pressed="false">
         <svg class="icon i-moon" aria-hidden="true"><use href="#i-moon"/></svg>
         <svg class="icon i-sun" aria-hidden="true"><use href="#i-sun"/></svg>
@@ -637,6 +648,7 @@
       <a href="/games/monko-letters/">Monko Letters</a>
       <a href="/games/monko-quest/">Monko Quest</a>
       <a href="/privacy/">Privacy</a>
+      <a href="/nl/" hreflang="nl" lang="nl">Nederlands</a>
       <a href="https://www.sofmon.com" rel="noopener">sofmon.com</a>
     </nav>
     <p class="footer-note">Monkotorix provides games and playful activities for children. It is not a medical, therapeutic, diagnostic, or professional educational service and is not intended to replace advice or support from qualified healthcare or education professionals.</p>
