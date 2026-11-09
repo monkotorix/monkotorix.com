@@ -39,7 +39,6 @@ served from the same site under `/games/<game>/`, and zero third-party requests.
 | `site/games/neurocrew/` | **Monko Focus** (beta, formerly NeuroCrew), built from `../neurocrew`. The URL keeps the old slug so existing installs and saved progress carry over. |
 | `site/games/lezen-met-olli/` | **Monko Reads** (beta, formerly Lezen met Olli), built from `../monkoreads` ([monkotorix/monkoreads](https://github.com/monkotorix/monkoreads)). The URL keeps the old slug so existing links and installs keep working. |
 | `site/games/monko-letters/` | **Monko Letters** (beta), built from `../monkoletters` ([monkotorix/monkoletters](https://github.com/monkotorix/monkoletters)). |
-| `site/games/monko-quest/` | **Monko Quest** (beta), built from `../monkoquest` ([monkotorix/monkoquest](https://github.com/monkotorix/monkoquest)). It is played sideways, so its panel uses the wide `.game-shot.wide` frame and a 1180×820 screenshot. |
 | `site/privacy/` | Privacy notice for the website and the games. |
 | `site/404.html`, `robots.txt`, `sitemap.xml`, `.nojekyll` | Hosting files. |
 | `build-game.sh` | Rebuilds one game or all of them into `site/games/`. |
@@ -73,8 +72,15 @@ still), and `prefers-reduced-motion` turns off even that.
 ./build-game.sh neurocrew
 ./build-game.sh lezen-met-olli
 ./build-game.sh monko-letters
-./build-game.sh monko-quest
 ```
+
+**Monko Quest** ([monkotorix/monkoquest](https://github.com/monkotorix/monkoquest)) is not on the site
+until it is ready. It was published on 9 November 2026 and taken off the same day in the commit
+“Take Monko Quest off the site until it is ready”. To bring it back, revert that commit (it restores
+its panel in both languages, the footer link, its privacy sections, the sitemap entry, its
+screenshots and its Dutch pairs in `tools/make_dutch.py`), then run `./build-game.sh monko-quest`
+for the latest version and `python3 tools/make_dutch.py`. It is played sideways, so its panel uses
+the wide `.game-shot.wide` frame (still in the page’s styles) and a 960×667 screenshot.
 
 The script copies the sibling game checkout (or `$NEUROCREW_DIR` / `$MONKOREADS_DIR` / `$MONKOLETTERS_DIR` / `$MONKOQUEST_DIR`) to a temp
 dir, installs and builds it there, removes hosting files that only apply at a site root, adds the
@@ -113,7 +119,7 @@ games' own Dutch names for what parents see in them (*Volwassenenhoek*, *Profiel
 *Geluid en stem*, *Rustige stand*…), informal *je*, and *spelletjes* for the games.
 
 The Dutch home page shows Dutch screenshots where the English ones contain English words
-(`neurocrew-nl.webp`, `monko-quest-nl.webp`) and its own social-preview image (`og-nl.jpg`). The
+(`neurocrew-nl.webp`) and its own social-preview image (`og-nl.jpg`). The
 404 page is shared, so it says everything in both languages, and `site.js` gives the theme switch a
 Dutch tooltip on pages with `lang="nl"`.
 

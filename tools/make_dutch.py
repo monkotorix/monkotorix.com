@@ -44,7 +44,6 @@ HOME = [
      '<a href="/nl/privacy/">Privacy</a>\n      <a href="/" hreflang="en" lang="en">English</a>'),
     # Screenshots of the games in Dutch where the English one shows English words.
     ('src="/assets/neurocrew.webp"', 'src="/assets/neurocrew-nl.webp"'),
-    ('src="/assets/monko-quest.webp"', 'src="/assets/monko-quest-nl.webp"'),
 
     # Head.
     ("<title>Monkotorix — Different Minds. Endless Possibilities.</title>",
@@ -53,8 +52,8 @@ HOME = [
      '<meta name="description" content="Kleine spelletjes vol beweging, puzzels, letters en cijfers, gemaakt door ouders voor hun eigen neurodivergente kinderen en gedeeld met andere gezinnen.">'),
     ('<meta property="og:title" content="Monkotorix — Different Minds. Endless Possibilities.">',
      '<meta property="og:title" content="Monkotorix — Verschillende breinen. Eindeloze mogelijkheden.">'),
-    ('<meta property="og:description" content="Small games made by parents for their own neurodivergent children. Four games to play now, in beta.">',
-     '<meta property="og:description" content="Kleine spelletjes, gemaakt door ouders voor hun eigen neurodivergente kinderen. Vier spelletjes die je nu al kunt spelen, nog in bèta.">'),
+    ('<meta property="og:description" content="Small games made by parents for their own neurodivergent children. Three games to play now, in beta.">',
+     '<meta property="og:description" content="Kleine spelletjes, gemaakt door ouders voor hun eigen neurodivergente kinderen. Drie spelletjes die je nu al kunt spelen, nog in bèta.">'),
 
     # Top of the page.
     ('<a class="skip" href="#main">Skip to content</a>', '<a class="skip" href="#main">Naar de inhoud</a>'),
@@ -63,7 +62,7 @@ HOME = [
     ('<li><a href="#goal">Our goal</a></li>', '<li><a href="#goal">Ons doel</a></li>'),
     ('<li><a href="#games">Games</a></li>', '<li><a href="#games">Spelletjes</a></li>'),
     ('id="theme-toggle" aria-label="Dark theme"', 'id="theme-toggle" aria-label="Donker thema"'),
-    ('<b>Beta</b> Four games to play now</a>', '<b>Bèta</b> Vier spelletjes om nu te spelen</a>'),
+    ('<b>Beta</b> Three games to play now</a>', '<b>Bèta</b> Drie spelletjes om nu te spelen</a>'),
     ('<p class="hero-tagline">Different Minds. Endless&nbsp;Possibilities.</p>',
      '<p class="hero-tagline">Verschillende breinen. Eindeloze&nbsp;mogelijkheden.</p>'),
     ('<p class="hero-sub">Movement, puzzles, letters and numbers — small games to play together.</p>',
@@ -87,8 +86,8 @@ HOME = [
     ('<div class="c c1" aria-hidden="true">Games on<br>the screen</div>', '<div class="c c1" aria-hidden="true">Spelletjes op<br>het scherm</div>'),
     ('<div class="c c2" aria-hidden="true">Moving<br>the body</div>', '<div class="c c2" aria-hidden="true">Bewegen<br>met je lijf</div>'),
     ('<div class="c c3" aria-hidden="true">Playing<br>together</div>', '<div class="c c3" aria-hidden="true">Samen<br>spelen</div>'),
-    ("Each game is built around something our children found tricky, such as listening to the whole instruction before moving, waiting for the green light, switching when the rule changes, balancing on one leg, remembering a pattern, following the line of a letter, trying another way when a plan doesn’t work or hearing the sounds inside a word.",
-     "Elk spelletje draait om iets wat onze kinderen lastig vonden, zoals eerst naar de hele opdracht luisteren en dan pas bewegen, wachten op het groene licht, omschakelen als de regel verandert, op één been balanceren, een patroon onthouden, de lijn van een letter volgen, het op een andere manier proberen als een plan niet lukt of de klanken in een woord horen."),
+    ("Each game is built around something our children found tricky, such as listening to the whole instruction before moving, waiting for the green light, switching when the rule changes, balancing on one leg, remembering a pattern, following the line of a letter or hearing the sounds inside a word.",
+     "Elk spelletje draait om iets wat onze kinderen lastig vonden, zoals eerst naar de hele opdracht luisteren en dan pas bewegen, wachten op het groene licht, omschakelen als de regel verandert, op één been balanceren, een patroon onthouden, de lijn van een letter volgen of de klanken in een woord horen."),
     ("As parents, not therapists or teachers, we believe skills like these grow with practice, and that children keep at it when they’re enjoying themselves. So fun is the way in, not the goal. We mix the play as we think suits them best: a little on the screen, plenty of moving about and a grown-up alongside.",
      "Als ouders, niet als therapeuten of leerkrachten, geloven we dat zulke vaardigheden groeien door te oefenen, en dat kinderen volhouden als ze plezier hebben. Plezier is dus het middel, niet het doel. We wisselen het spelen af zoals het volgens ons het best bij hen past: een beetje op het scherm, veel bewegen en een volwassene erbij."),
     ("<p>We try to keep every game calm, clear and forgiving:</p>",
@@ -101,10 +100,10 @@ HOME = [
 
     # The games.
     ('<p class="rule">The Games</p>', '<p class="rule">De spelletjes</p>'),
-    ('<h2 id="games-h" class="title">Four games so&nbsp;far</h2>', '<h2 id="games-h" class="title">Tot nu toe vier&nbsp;spelletjes</h2>'),
+    ('<h2 id="games-h" class="title">Three games so&nbsp;far</h2>', '<h2 id="games-h" class="title">Tot nu toe drie&nbsp;spelletjes</h2>'),
     ("You can play them all in the browser on a phone, tablet or computer. There’s nothing to install, no sign-up, no ads and no tracking — just open a game and play together.",
      "Je speelt ze allemaal in de browser op een telefoon, tablet of computer. Niets te installeren, geen account, geen reclame en geen tracking — open een spelletje en speel samen."),
-    ('<span class="badge-beta">Beta</span>', '<span class="badge-beta">Bèta</span>', 4),
+    ('<span class="badge-beta">Beta</span>', '<span class="badge-beta">Bèta</span>', 3),
     ('<span class="nowrap">Ages 4–8</span>', '<span class="nowrap">4–8 jaar</span>', 2),
 
     # Monko Focus.
@@ -161,30 +160,10 @@ HOME = [
     ('alt="Monko Letters on a phone: the letter a, for “aap”, on a big writing pad. A finger has followed Stip the ladybird round the circle of the a in blue crayon, and Stip waits at the top of the down-stroke. Above the pad, Stip explains how to write the a."',
      'alt="Monko Letters op een telefoon: de letter a, van “aap”, op een groot schrijfvlak. Een vinger is Stip het lieveheersbeestje met blauw krijt gevolgd over het rondje van de a, en Stip wacht bovenaan het stokje. Boven het schrijfvlak legt Stip uit hoe je de a schrijft."'),
 
-    # Monko Quest.
-    ('alt="Monko Quest on a tablet held sideways: a dotted path winds through a starry sky past five planets: a lavender one with a sleepy little alien, a blue one, a rust-red one, a green one with two leaves and a yellow one with a ring. Monko the rocket waits beside the first planet, and a big brown button at the bottom flies there."',
-     'alt="Monko Quest op een tablet in liggende stand: een stippelpad kronkelt door een sterrenhemel langs vijf planeten: een lila planeet met een slaperig buitenaardsje, een blauwe, een roestrode, een groene met twee blaadjes en een gele met een ring. Monko de raket wacht naast de eerste planeet, en met een grote bruine knop onderaan vlieg je erheen."'),
-    ('<p class="sub">Space puzzle game · <span class="nowrap">Ages 6–9</span></p>',
-     '<p class="sub">Puzzelspel in de ruimte · <span class="nowrap">6–9 jaar</span></p>'),
-    ("A calm space game about trying things out. Children fly Monko the rocket to planets where someone needs help, such as a cosy bed for a tiny alien or a bridge for Bix the beetle. Then they pick tools, make a plan, try it and change it until it works.",
-     "Een rustig ruimtespel over dingen uitproberen. Kinderen vliegen met Monko de raket naar planeten waar iemand hulp nodig heeft: zo zoekt een klein buitenaardsje een knus bedje en heeft Bix het kevertje een brug nodig. Dan kiezen ze spullen uit, maken ze een plan, proberen ze het en passen ze het aan tot het lukt."),
-    ("<li>Five planets, each with its own thing to build or rescue</li>", "<li>Vijf planeten, elk met iets anders om te bouwen of te redden</li>"),
-    ("<li>Three challenges, Explore, Invent and Experiment, with more tools, steps and goals each time</li>",
-     "<li>Drie uitdagingen (Ontdekken, Uitvinden en Experimenteren), met steeds meer spullen, stappen en doelen</li>"),
-    ("<li>Every try shows each goal as “yes!” or “not yet”, with a clue whenever a child asks for one</li>",
-     "<li>Na elke poging staat bij elk doel “ja!” of “nog niet”, met een hint als een kind erom vraagt</li>"),
-    ("<li>No timers, no lives and no scores. Each invention gets a sticker and a name in “My inventions”</li>",
-     "<li>Geen klok, geen levens en geen punten. Elke uitvinding krijgt een sticker en een naam in “Mijn uitvindingen”</li>"),
-    ("<li>Calm mode, bigger targets, read-aloud instructions and a breathing break</li>",
-     "<li>Rustige stand, grotere knoppen, opdrachten die worden voorgelezen en een adempauze</li>"),
-    ("<li>In English and Dutch, on a tablet or computer held sideways</li>",
-     "<li>In het Nederlands en het Engels, op een tablet in liggende stand of op een computer</li>"),
-    ("Play Monko Quest</a>", "Speel Monko Quest</a>"),
-
     # What beta means.
     ("<h3 id=\"beta-h\">What “beta” means</h3>", "<h3 id=\"beta-h\">Wat “bèta” betekent</h3>"),
-    ("All four games are ready to play, but none of them is finished yet. You may spot rough edges, and we keep changing things as our children grow and as we hear from other families. Progress is saved only in the browser on your device, so it won’t follow you to another device or browser. The <a href=\"/privacy/\">privacy notice</a> has the details.",
-     "Alle vier de spelletjes zijn klaar om te spelen, maar ze zijn nog niet af. Je komt misschien nog ruwe randjes tegen, en we blijven dingen aanpassen naarmate onze kinderen groter worden en we horen hoe het bij andere gezinnen gaat. Voortgang wordt alleen opgeslagen in de browser op je apparaat, dus die gaat niet mee naar een ander apparaat of een andere browser. In de <a href=\"/nl/privacy/\">privacyverklaring</a> lees je er meer over."),
+    ("All three games are ready to play, but none of them is finished yet. You may spot rough edges, and we keep changing things as our children grow and as we hear from other families. Progress is saved only in the browser on your device, so it won’t follow you to another device or browser. The <a href=\"/privacy/\">privacy notice</a> has the details.",
+     "Alle drie de spelletjes zijn klaar om te spelen, maar ze zijn nog niet af. Je komt misschien nog ruwe randjes tegen, en we blijven dingen aanpassen naarmate onze kinderen groter worden en we horen hoe het bij andere gezinnen gaat. Voortgang wordt alleen opgeslagen in de browser op je apparaat, dus die gaat niet mee naar een ander apparaat of een andere browser. In de <a href=\"/nl/privacy/\">privacyverklaring</a> lees je er meer over."),
 
     # Why we share it.
     ('<p class="rule">Why We Share It</p>', '<p class="rule">Waarom we het delen</p>'),
@@ -216,8 +195,8 @@ PRIVACY = [
 
     # Head.
     ("<title>Privacy notice — Monkotorix</title>", "<title>Privacyverklaring — Monkotorix</title>"),
-    ('<meta name="description" content="How the Monkotorix website and its beta games, Monko Focus, Monko Reads, Monko Letters and Monko Quest, handle data: no accounts, no ads, no tracking, and progress kept only on your device.">',
-     '<meta name="description" content="Hoe de website van Monkotorix en de bètaspelletjes Monko Focus, Monko Reads, Monko Letters en Monko Quest met gegevens omgaan: geen accounts, geen reclame, geen tracking, en voortgang alleen op je eigen apparaat.">'),
+    ('<meta name="description" content="How the Monkotorix website and its beta games, Monko Focus, Monko Reads and Monko Letters, handle data: no accounts, no ads, no tracking, and progress kept only on your device.">',
+     '<meta name="description" content="Hoe de website van Monkotorix en de bètaspelletjes Monko Focus, Monko Reads en Monko Letters met gegevens omgaan: geen accounts, geen reclame, geen tracking, en voortgang alleen op je eigen apparaat.">'),
     ('<meta property="og:title" content="Privacy notice — Monkotorix">', '<meta property="og:title" content="Privacyverklaring — Monkotorix">'),
     ('<meta property="og:description" content="No accounts, no ads, no tracking — progress stays on your device.">',
      '<meta property="og:description" content="Geen accounts, geen reclame, geen tracking — je voortgang blijft op je apparaat.">'),
@@ -247,8 +226,8 @@ PRIVACY = [
 
     # The beta games.
     ("<h2>The beta games</h2>", "<h2>De bètaspelletjes</h2>"),
-    ("<p>All four games run entirely in your browser. They don’t have accounts and don’t send what a child does anywhere — not to us, and not to anyone else.</p>",
-     "<p>Alle vier de spelletjes draaien helemaal in je browser. Ze hebben geen accounts en sturen niets van wat een kind doet ergens naartoe — niet naar ons en ook niet naar iemand anders.</p>"),
+    ("<p>All three games run entirely in your browser. They don’t have accounts and don’t send what a child does anywhere — not to us, and not to anyone else.</p>",
+     "<p>Alle drie de spelletjes draaien helemaal in je browser. Ze hebben geen accounts en sturen niets van wat een kind doet ergens naartoe — niet naar ons en ook niet naar iemand anders.</p>"),
 
     ("<p>Monko Focus stores its settings and progress in your browser’s local storage under <code>coordination-games:settings</code>. This includes the language and age band, the grown-up’s settings (sound, read-aloud and how much the buddy talks, calm mode, bigger targets, words under pictures, left-handed, the wait-your-turn light, more challenge, speed, session length and which games can be played), stars, stickers, progress along the magic path, and when each game was last played. Under <code>monko-focus:heard</code> it also remembers which instructions the child has already heard before pressing Go or “My turn!”, so that next time those buttons work straight away.</p>",
      "<p>Monko Focus bewaart zijn instellingen en voortgang in de lokale opslag van je browser, onder <code>coordination-games:settings</code>. Daarbij horen de taal en de leeftijdsgroep, de instellingen van de volwassene (geluid, voorlezen en hoeveel het maatje praat, rustige stand, grotere doelen, woorden onder plaatjes, linkshandig, het beurtlicht, meer uitdaging, tempo, speeltijd en welke spelletjes gespeeld kunnen worden), sterren, stickers, de voortgang op het toverpad en wanneer elk spelletje voor het laatst is gespeeld. Onder <code>monko-focus:heard</code> onthoudt het spel ook welke opdrachten het kind al had gehoord voordat het op Start of “Mijn beurt!” drukte, zodat die knoppen de volgende keer meteen werken.</p>"),
@@ -265,23 +244,16 @@ PRIVACY = [
     ("<p>You can delete it with <strong>Remove profile</strong> (<span lang=\"nl\">Profiel verwijderen</span>) on the <strong>Child</strong> page of the game’s grown-up corner. This removes the name and age, the stars, trophies and prizes, and puts the settings back to how they started (the languages stay).</p>",
      "<p>Je kunt dit wissen met <strong>Profiel verwijderen</strong> op de pagina <strong>Kind</strong> in de volwassenenhoek van het spel. Daarmee verdwijnen de naam en leeftijd, de sterren, bekers en prijzen, en gaan de instellingen terug naar de beginstand (de talen blijven staan).</p>"),
 
-    ("<p>Monko Quest stores its settings and progress in your browser’s local storage under <code>monkoquest</code>: the language, the challenge, the grown-up’s settings (calm mode, game speed, bigger targets, the wait-your-turn light, left-handed, voice and how much Monko talks, sound effects, words under pictures, play time and which planets are open), each planet’s progress and plans, and the inventions in “My inventions” with the names a child gives them. If a grown-up fills them in, it also keeps the child’s first name, age and gender.</p>",
-     "<p>Monko Quest bewaart zijn instellingen en voortgang in de lokale opslag van je browser, onder <code>monkoquest</code>: de taal, de uitdaging, de instellingen van de volwassene (rustige stand, speltempo, grotere knoppen, het beurtlicht, linkshandig, stem en hoeveel Monko praat, geluidjes, woorden onder plaatjes, speeltijd en welke planeten open zijn), de voortgang en plannen per planeet, en de uitvindingen in “Mijn uitvindingen” met de namen die een kind ze geeft. Als een volwassene de voornaam, de leeftijd en het geslacht van het kind invult, bewaart het spel die ook.</p>"),
-    ("<p>In the game’s grown-up corner, <strong>Reset</strong> (<span lang=\"nl\">Wissen</span>) on the <strong>Progress</strong> page removes the progress and inventions, and <strong>Remove profile</strong> (<span lang=\"nl\">Profiel verwijderen</span>) on the <strong>Child</strong> page also removes the name, age and gender and puts the settings back to how they started (the language stays).</p>",
-     "<p>In de volwassenenhoek van het spel verwijder je met <strong>Wissen</strong> bij “Alle voortgang wissen” op de pagina <strong>Voortgang</strong> de voortgang en de uitvindingen. Met <strong>Profiel verwijderen</strong> op de pagina <strong>Kind</strong> wis je ook de naam, de leeftijd en het geslacht, en gaan de instellingen terug naar de beginstand (de taal blijft staan).</p>"),
-
     # Read-aloud voices.
     ("<h3>Read-aloud voices</h3>", "<h3>Voorleesstemmen</h3>"),
-    ("<p>All four games can read instructions aloud with the speech voices your browser offers. Some of those voices are online voices — for example Microsoft Edge’s “Online (Natural)” voices and Chrome’s voices named “Google …”. When one of those is used, the browser sends the sentence being read to its maker’s speech service. Only the game’s own sentences and words are sent this way, never anything about the child. This is part of how the browser works, not something the games do.</p>",
-     "<p>Alle vier de spelletjes kunnen opdrachten voorlezen met de spraakstemmen die je browser aanbiedt. Sommige daarvan zijn online stemmen — bijvoorbeeld de <span lang=\"en\">“Online (Natural)”</span>-stemmen van Microsoft Edge en de stemmen in Chrome waarvan de naam met “Google” begint. Wordt zo’n stem gebruikt, dan stuurt de browser de zin die wordt voorgelezen naar de spraakdienst van de maker van die stem. Op die manier worden alleen de eigen zinnen en woorden van het spel verstuurd, nooit iets over het kind. Dit hoort bij hoe de browser werkt; de spelletjes doen dit niet zelf.</p>"),
+    ("<p>All three games can read instructions aloud with the speech voices your browser offers. Some of those voices are online voices — for example Microsoft Edge’s “Online (Natural)” voices and Chrome’s voices named “Google …”. When one of those is used, the browser sends the sentence being read to its maker’s speech service. Only the game’s own sentences and words are sent this way, never anything about the child. This is part of how the browser works, not something the games do.</p>",
+     "<p>Alle drie de spelletjes kunnen opdrachten voorlezen met de spraakstemmen die je browser aanbiedt. Sommige daarvan zijn online stemmen — bijvoorbeeld de <span lang=\"en\">“Online (Natural)”</span>-stemmen van Microsoft Edge en de stemmen in Chrome waarvan de naam met “Google” begint. Wordt zo’n stem gebruikt, dan stuurt de browser de zin die wordt voorgelezen naar de spraakdienst van de maker van die stem. Op die manier worden alleen de eigen zinnen en woorden van het spel verstuurd, nooit iets over het kind. Dit hoort bij hoe de browser werkt; de spelletjes doen dit niet zelf.</p>"),
     ("<p>Monko Reads plays its own recordings of Olli’s lines in English and Dutch, which come from this website too. Only a line it has no recording of, or one that can’t load in time, is read by a device voice: it picks a voice that runs on the device when there is one, and only uses an online voice when the device has none of its own for the language. An online voice never hears the child’s name: Olli then says the line without it. Online voices are marked “(online)” in the voice list under <strong>Sound &amp; voice</strong> (<span lang=\"nl\">Geluid en stem</span>) in the grown-up corner. To be sure nothing is sent, choose a voice without that mark there, or switch off <strong>Olli talks</strong> (<span lang=\"nl\">Olli praat</span>).</p>",
      "<p>Monko Reads speelt eigen opnames af van wat Olli zegt, in het Nederlands en het Engels; ook die komen van deze website. Alleen een zin zonder opname, of een zin waarvan de opname niet op tijd laadt, wordt voorgelezen door een stem van het apparaat: het spel kiest een stem die op het apparaat zelf draait als die er is, en gebruikt alleen een online stem als het apparaat zelf geen stem voor de taal heeft. Een online stem krijgt de naam van het kind nooit te horen: Olli zegt de zin dan zonder naam. In de stemmenlijst bij <strong>Geluid en stem</strong> in de volwassenenhoek staat “(online)” achter de naam van online stemmen. Wil je zeker weten dat er niets wordt verstuurd, kies daar dan een stem zonder die vermelding, of zet <strong>Olli praat</strong> uit.</p>"),
     ("<p>Monko Focus plays its own recordings of the buddy’s lines. They come from this website like the rest of the game, so nothing is sent for them. Only a line it has no recording of, or one that can’t load in time, is read by a device voice: Monko Focus picks one for the chosen language by itself, preferring voices that run on the device or sound natural, and has no list of voices to choose from. To be sure nothing is sent, switch off <strong>Voice</strong> under <strong>Sound &amp; voice</strong> in its grown-up corner.</p>",
      "<p>Monko Focus speelt eigen opnames af van wat het maatje zegt. Die komen net als de rest van het spel van deze website, dus daarvoor wordt niets verstuurd. Alleen een zin zonder opname, of een zin waarvan de opname niet op tijd laadt, wordt voorgelezen door een stem van het apparaat: Monko Focus kiest die zelf voor de gekozen taal, met een voorkeur voor stemmen die op het apparaat draaien of natuurlijk klinken, en heeft geen lijst om uit te kiezen. Wil je zeker weten dat er niets wordt verstuurd, zet dan <strong>Stem</strong> uit bij <strong>Geluid en stem</strong> in de volwassenenhoek.</p>"),
     ("<p>Monko Letters plays its own recordings of Stip’s lines, which come from this website too. Only a line it has no recording of, or one that can’t load in time, is read by a device voice: it takes the first Dutch voice the browser offers (in English, a British English one if there is one), which can be an online voice, and has no list of voices to choose from. To be sure nothing is sent, switch off <strong>Voice</strong> (<span lang=\"nl\">Stem</span>) under <strong>Sound &amp; voice</strong> in its grown-up corner, and don’t tap Stip’s message or <strong>Read aloud</strong> (<span lang=\"nl\">Lees voor</span>).</p>",
      "<p>Monko Letters speelt eigen opnames af van wat Stip zegt; ook die komen van deze website. Alleen een zin zonder opname, of een zin waarvan de opname niet op tijd laadt, wordt voorgelezen door een stem van het apparaat: het spel neemt de eerste Nederlandse stem die de browser aanbiedt (in het Engels een Brits-Engelse stem als die er is), en dat kan een online stem zijn. Er is geen lijst om uit te kiezen. Wil je zeker weten dat er niets wordt verstuurd, zet dan <strong>Stem</strong> uit bij <strong>Geluid en stem</strong> in de volwassenenhoek, en tik niet op het berichtje van Stip of op <strong>Lees voor</strong>.</p>"),
-    ("<p>Monko Quest plays its own recordings of Monko’s lines in English and Dutch, which come from this website too. Only a line it has no recording of, or one that can’t load in time, is read by a device voice: it picks one for the language by itself, preferring a voice that runs on the device, and an online voice never hears the child’s name. It has no list of voices to choose from. To be sure nothing is sent, switch off <strong>Voice</strong> (<span lang=\"nl\">Stem</span>) under <strong>Sound &amp; voice</strong> in its grown-up corner.</p>",
-     "<p>Monko Quest speelt eigen opnames af van wat Monko zegt, in het Nederlands en het Engels; ook die komen van deze website. Alleen een zin zonder opname, of een zin waarvan de opname niet op tijd laadt, wordt voorgelezen door een stem van het apparaat: het spel kiest die zelf voor de taal, met een voorkeur voor een stem die op het apparaat draait, en een online stem krijgt de naam van het kind nooit te horen. Er is geen lijst om uit te kiezen. Wil je zeker weten dat er niets wordt verstuurd, zet dan <strong>Stem</strong> uit bij <strong>Geluid en stem</strong> in de volwassenenhoek.</p>"),
 
     # Deleting everything, rights, children, changes.
     ("<h2>Deleting everything</h2>", "<h2>Alles wissen</h2>"),
@@ -293,8 +265,8 @@ PRIVACY = [
     ("<p>You can ask us what personal data we hold about you (normally none, apart from emails you sent us), and ask us to correct or delete it, or object to how we use it. Email <a href=\"mailto:hello@monkotorix.com\">hello@monkotorix.com</a>. If you’re not happy with our answer, you can complain to the Dutch Data Protection Authority, the <a href=\"https://autoriteitpersoonsgegevens.nl\" rel=\"noopener\" lang=\"nl\">Autoriteit Persoonsgegevens</a>.</p>",
      "<p>Je kunt ons vragen welke persoonsgegevens we van je hebben (normaal gesproken geen, behalve e-mails die je ons hebt gestuurd), en ons vragen die te corrigeren of te verwijderen, of bezwaar maken tegen hoe we ze gebruiken. Mail daarvoor naar <a href=\"mailto:hello@monkotorix.com\">hello@monkotorix.com</a>. Ben je niet tevreden met ons antwoord, dan kun je een klacht indienen bij de <a href=\"https://autoriteitpersoonsgegevens.nl\" rel=\"noopener\">Autoriteit Persoonsgegevens</a>.</p>"),
     ("<h2>Children</h2>", "<h2>Kinderen</h2>"),
-    ("<p>Monkotorix is made for children to use with the grown-ups who support them. We don’t collect or receive personal information from children through the website or the games. The optional profiles in all four games are filled in by a grown-up and never leave the device.</p>",
-     "<p>Monkotorix is gemaakt voor kinderen, om samen te gebruiken met de volwassenen die hen begeleiden. We verzamelen of ontvangen via de website of de spelletjes geen persoonsgegevens van kinderen. De profielen in alle vier de spelletjes zijn niet verplicht, worden ingevuld door een volwassene en verlaten het apparaat nooit.</p>"),
+    ("<p>Monkotorix is made for children to use with the grown-ups who support them. We don’t collect or receive personal information from children through the website or the games. The optional profiles in all three games are filled in by a grown-up and never leave the device.</p>",
+     "<p>Monkotorix is gemaakt voor kinderen, om samen te gebruiken met de volwassenen die hen begeleiden. We verzamelen of ontvangen via de website of de spelletjes geen persoonsgegevens van kinderen. De profielen in alle drie de spelletjes zijn niet verplicht, worden ingevuld door een volwassene en verlaten het apparaat nooit.</p>"),
     ("<h2>Changes</h2>", "<h2>Wijzigingen</h2>"),
     ("<p>If the games ever start to work differently — for example, if we add optional accounts or progress sharing — we will update this notice first and say so clearly on the website.</p>",
      "<p>Als de spelletjes ooit anders gaan werken — bijvoorbeeld als we optionele accounts of het delen van voortgang toevoegen — passen we eerst deze verklaring aan en melden we dat duidelijk op de website.</p>"),

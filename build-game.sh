@@ -5,7 +5,8 @@
 #   ./build-game.sh lezen-met-olli   # Monko Reads     <- ../monkoreads      (or $MONKOREADS_DIR)
 #   ./build-game.sh monko-letters    # Monko Letters   <- ../monkoletters    (or $MONKOLETTERS_DIR)
 #   ./build-game.sh monko-quest      # Monko Quest     <- ../monkoquest      (or $MONKOQUEST_DIR)
-#   ./build-game.sh all              # all four
+#   ./build-game.sh all              # the three games on the site (not Monko Quest, which is off
+#                                    # the site until it is ready; see the README)
 #
 # Run this whenever a game changes and you want the website copy updated.
 # All games build with a RELATIVE base (vite.config.ts: base: './'), so they work
@@ -148,6 +149,6 @@ case "${1:-all}" in
   lezen-met-olli) build_lezen_met_olli ;;
   monko-letters) build_monko_letters ;;
   monko-quest) build_monko_quest ;;
-  all) build_neurocrew; build_lezen_met_olli; build_monko_letters; build_monko_quest ;;
+  all) build_neurocrew; build_lezen_met_olli; build_monko_letters ;;
   *) echo "usage: $0 [neurocrew|lezen-met-olli|monko-letters|monko-quest|all]" >&2; exit 2 ;;
 esac
