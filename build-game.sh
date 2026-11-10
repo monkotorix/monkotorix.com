@@ -113,7 +113,7 @@ build_neurocrew() {
     "${NEUROCREW_DIR:-$ROOT/../neurocrew}" \
     "Monko Focus – Movement & puzzle games" \
     "Monko Focus (beta) — play in your browser" \
-    "Playful movement and puzzle games for children aged 4 to 8, in English and Dutch. No accounts, no ads, no tracking. A Monkotorix beta." \
+    "Playful movement and puzzle games for children aged 4 to 8, in English, Dutch, French and Bulgarian. No accounts, no ads, no tracking. A Monkotorix beta." \
     "og-neurocrew.jpg"
 }
 

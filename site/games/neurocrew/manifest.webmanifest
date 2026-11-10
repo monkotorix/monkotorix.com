@@ -1,7 +1,7 @@
 {
   "name": "Monko Focus – Movement & puzzle games",
   "short_name": "Monko Focus",
-  "description": "Playful movement and puzzle games for children aged 4 to 8, in English and Dutch.",
+  "description": "Playful movement and puzzle games for children aged 4 to 8, in English, Dutch, French and Bulgarian.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
