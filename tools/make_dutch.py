@@ -108,10 +108,10 @@ HOME = [
 
     # Monko Focus.
     ('<p class="sub">Movement &amp; puzzle games · ', '<p class="sub">Beweeg- en puzzelspelletjes · '),
-    ("Short, playful games for hands, eyes and the whole body. A friendly buddy shows every move as children trace, pop, catch, copy and balance their way along a magic path through five worlds — with breathing breaks along the way.",
-     "Korte, speelse spelletjes voor handen, ogen en het hele lijf. Een vriendelijk maatje doet elke beweging voor, terwijl kinderen over een toverpad door vijf werelden gaan: lijnen natrekken, bellen laten knappen, vangen, nadoen en balanceren. Onderweg zijn er adempauzes."),
-    ("<li>27 games in six groups — from tracing and catching to patterns and little sudokus</li>",
-     "<li>27 spelletjes in zes groepen — van natrekken en vangen tot patronen en kleine sudoku’s</li>"),
+    ("Short, playful games for hands, eyes and the whole body. A friendly buddy shows every move as children trace, pop, catch, copy and balance their way along a magic path through seven worlds — with breathing breaks along the way.",
+     "Korte, speelse spelletjes voor handen, ogen en het hele lijf. Een vriendelijk maatje doet elke beweging voor, terwijl kinderen over een toverpad door zeven werelden gaan: lijnen natrekken, bellen laten knappen, vangen, nadoen en balanceren. Onderweg zijn er adempauzes."),
+    ("<li>33 games in six groups — from tracing and catching to patterns and little sudokus</li>",
+     "<li>33 spelletjes in zes groepen — van natrekken en vangen tot patronen en kleine sudoku’s</li>"),
     ("<li>Separate levels for ages 4–5 and 6–8 that get a little harder with each year of age, and a setting to make them easier or harder</li>",
      "<li>Aparte levels voor 4–5 en 6–8 jaar, die per leeftijdsjaar iets moeilijker worden, en een instelling om ze makkelijker of moeilijker te maken</li>"),
     ("<li>Games that adapt as children play: they ease off after a miss and speed up after a good run</li>",
