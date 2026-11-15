@@ -1,5 +1,5 @@
 #!/bin/bash
-# Rebuild one beta game into site/games/<slug>/.
+# Rebuild one game into site/games/<slug>/.
 #
 #   ./build-game.sh neurocrew        # Monko Focus     <- ../neurocrew       (or $NEUROCREW_DIR)
 #   ./build-game.sh lezen-met-olli   # Monko Reads     <- ../monkoreads      (or $MONKOREADS_DIR)
@@ -112,8 +112,8 @@ build_neurocrew() {
   build neurocrew \
     "${NEUROCREW_DIR:-$ROOT/../neurocrew}" \
     "Monko Focus – Movement & puzzle games" \
-    "Monko Focus (beta) — play in your browser" \
-    "Playful movement and puzzle games for children aged 4 to 8, in English, Dutch, French, Bulgarian and Spanish. No accounts, no ads, no tracking. A Monkotorix beta." \
+    "Monko Focus — play in your browser" \
+    "Playful movement and puzzle games for children aged 4 to 8, in English, Dutch, French, Bulgarian and Spanish. No accounts, no ads, no tracking. From Monkotorix." \
     "og-neurocrew.jpg"
 }
 
