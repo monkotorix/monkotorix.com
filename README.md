@@ -40,6 +40,8 @@ served from the same site under `/games/<game>/`, and zero third-party requests.
 | `site/games/lezen-met-olli/` | **Monko Reads** (beta, formerly Lezen met Olli), built from `../monkoreads` ([monkotorix/monkoreads](https://github.com/monkotorix/monkoreads)). The URL keeps the old slug so existing links and installs keep working. |
 | `site/games/monko-letters/` | **Monko Letters** (beta), built from `../monkoletters` ([monkotorix/monkoletters](https://github.com/monkotorix/monkoletters)). |
 | `site/privacy/` | Privacy notice for the website and the games. |
+| `site/privacy/monko-focus/` | The privacy policy of the Monko Focus app (App Store and Google Play), the URL both stores link to. English only. **Generated** from `docs/privacy-policy.md` in the Monko Focus repo, word for word: change the policy there first, then rebuild this page (see *The Monko Focus privacy policy* below). Never edit it by hand. |
+| `tools/monko_focus_policy/` | Builds `site/privacy/monko-focus/` from the Monko Focus policy and checks that the page says the policy word for word. |
 | `site/404.html`, `robots.txt`, `sitemap.xml`, `.nojekyll` | Hosting files. |
 | `build-game.sh` | Rebuilds one game or all of them into `site/games/`. |
 | `tools/locks/` | The exact dependency versions each game was built with (the game repos have no lockfile of their own). |
@@ -124,6 +126,24 @@ The Dutch home page shows Dutch screenshots where the English ones contain Engli
 (`neurocrew-nl.webp`) and its own social-preview image (`og-nl.jpg`). The
 404 page is shared, so it says everything in both languages, and `site.js` gives the theme switch a
 Dutch tooltip on pages with `lang="nl"`.
+
+## The Monko Focus privacy policy
+
+`site/privacy/monko-focus/` is the privacy policy of the Monko Focus app. Its text is
+`docs/privacy-policy.md` from the Monko Focus repo (`../neurocrew`,
+[monkotorix/monkofocus](https://github.com/monkotorix/monkofocus)), word for word. Change the policy
+there first, then rebuild the page and check it:
+
+```bash
+python3 tools/monko_focus_policy/md_to_body.py ../neurocrew/docs/privacy-policy.md > /tmp/monko-focus-body.html
+python3 tools/monko_focus_policy/make_page.py /tmp/monko-focus-body.html site/privacy/index.html site/privacy/monko-focus/index.html
+python3 tools/monko_focus_policy/check_same_text.py ../neurocrew/docs/privacy-policy.md site/privacy/monko-focus/index.html
+```
+
+The last command prints `OK` when the page says the policy word for word, or else the first words
+that differ. `md_to_body.py` knows headings, paragraphs, lists, **bold** and the Contact block, and
+stops on anything else. The page takes its styles, emblem and Content-Security-Policy from
+`site/privacy/index.html`, so rebuild it after changing those too. It has no Dutch twin.
 
 ## Updating the hero illustration
 
