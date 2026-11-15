@@ -44,6 +44,7 @@ HOME = [
      '<a href="/nl/privacy/">Privacy</a>\n      <a href="/" hreflang="en" lang="en">English</a>'),
     # Screenshots of the games in Dutch where the English one shows English words.
     ('src="/assets/neurocrew.webp"', 'src="/assets/neurocrew-nl.webp"'),
+    ('src="/assets/monko-quest.webp"', 'src="/assets/monko-quest-nl.webp"'),
 
     # Head.
     ("<title>Monkotorix — Different Minds. Endless Possibilities.</title>",
@@ -162,6 +163,46 @@ HOME = [
     ("Play Monko Letters</a>", "Speel Monko Letters</a>"),
     ('alt="Monko Letters on a phone: the letter a, for “aap”, on a big writing pad. A finger has followed Stip the ladybird round the circle of the a in blue crayon, and Stip waits at the top of the down-stroke. Above the pad, Stip explains how to write the a."',
      'alt="Monko Letters op een telefoon: de letter a, van “aap”, op een groot schrijfvlak. Een vinger is Stip het lieveheersbeestje met blauw krijt gevolgd over het rondje van de a, en Stip wacht bovenaan het stokje. Boven het schrijfvlak legt Stip uit hoe je de a schrijft."'),
+
+    # Coming soon: Monko Math and Monko Quest (no play button yet).
+    ('<span class="badge-soon">Coming soon</span>', '<span class="badge-soon">Binnenkort</span>', 2),
+    ("<li>In English and Dutch, on a tablet or computer held sideways</li>",
+     "<li>In het Nederlands en het Engels, op een tablet in liggende stand of op een computer</li>", 2),
+
+    # Monko Math.
+    ('alt="Monko Math on a tablet held sideways: Apple crate. An apple tree full of red apples stands on the left. On the right, a big 3 sits above a crate with ten spaces, and one apple is already in it. Bear, the buddy, waits in the top corner, and a big brown button with a tick checks the answer."',
+     'alt="Monko Math op een tablet in liggende stand: Appelkrat. Links staat een appelboom vol rode appels. Rechts staat een grote 3 boven een krat met tien vakjes, waar al één appel in ligt. Beer, het maatje, wacht in de bovenhoek, en met een grote bruine knop met een vinkje controleer je het antwoord."'),
+    ('<p class="sub">Numbers game · <span class="nowrap">Ages 3–10</span></p>',
+     '<p class="sub">Rekenspel · <span class="nowrap">3–10 jaar</span></p>'),
+    ("A calm maths game in a small town. Children walk from stop to stop with their buddy and help with the jobs: fill the apple crates, pay at the market, make&nbsp;10, follow the frog along the number line and work out how much paint a wall needs.",
+     "Een rustig rekenspel in een klein stadje. Kinderen lopen met hun maatje van stop naar stop en helpen met de klusjes: de appelkratten vullen, betalen op de markt, precies&nbsp;10 maken, de kikker volgen over de getallenlijn en uitrekenen hoeveel verf er nodig is voor een muur."),
+    ("<li>Six games: Apple crate, How many?, The shop, Make&nbsp;10, Frog hops and Paint the house</li>",
+     "<li>Zes spelletjes: Appelkrat, Hoeveel?, De winkel, Maak&nbsp;10, Kikkersprongen en Verf het huis</li>"),
+    ("<li>A maths level for each child, separate from their age, so a child who is ahead starts where it fits</li>",
+     "<li>Een rekenniveau per kind, los van de leeftijd, zodat een kind dat al verder is, meteen op een passend niveau begint</li>"),
+    ("<li>Each game follows how the child plays, and a grown-up can put any game on any level</li>",
+     "<li>Elk spelletje gaat mee met hoe het kind speelt, en een volwassene kan elk spelletje op elk niveau zetten</li>"),
+    ("<li>No timers, no lives and no scores. After two wrong tries, the right answer glows</li>",
+     "<li>Geen klok, geen levens en geen punten. Na twee foute pogingen licht het goede antwoord op</li>"),
+    ("<li>Dots, apples or coins to count on the early levels, calm mode, a slower speed and a break whenever a child wants one</li>",
+     "<li>Stippen, appels of munten om te tellen op de eerste niveaus, een rustige stand, een lager tempo en een pauze wanneer het kind dat wil</li>"),
+
+    # Monko Quest.
+    ('<p class="sub">Space puzzle game · <span class="nowrap">Ages 4–12</span></p>',
+     '<p class="sub">Puzzelspel in de ruimte · <span class="nowrap">4–12 jaar</span></p>'),
+    ("A calm space game about trying things out. Children fly Monko the rocket to planets where someone needs help, such as a cosy bed for a sleepy alien or a bridge for Bix the beetle. Then they build with the tools on the shelf, try it out and change it until it works.",
+     "Een rustig ruimtespel over dingen uitproberen. Kinderen vliegen met Monko de raket naar planeten waar iemand hulp nodig heeft: zo wil een slaperig buitenaardsje een knus bedje en heeft Bix het kevertje een brug nodig. Dan bouwen ze iets met de spullen op de plank, proberen ze het uit en passen ze het aan tot het lukt."),
+    ("<li>Five planets, each with its own thing to build or rescue</li>", "<li>Vijf planeten, elk met iets anders om te bouwen of te redden</li>"),
+    ("<li>Four challenges — First steps, Explore, Invent and Experiment — with more tools, steps and goals each time. From age 10, the game looks like mission control</li>",
+     "<li>Vier uitdagingen (Eerste stapjes, Ontdekken, Uitvinden en Experimenteren), met steeds meer spullen, stappen en doelen. Vanaf 10 jaar ziet het spel eruit als een missiecentrale</li>"),
+    ("<li>Monko always says what happened and why, and gives a hint when a second try doesn’t work yet</li>",
+     "<li>Monko vertelt altijd wat er gebeurde en waarom, en geeft een hint als het de tweede keer nog niet lukt</li>"),
+    ("<li>No timers, no lives and no scores. Each invention gets a sticker in “My inventions”, and a name if the child wants one</li>",
+     "<li>Geen klok, geen levens en geen punten. Elke uitvinding krijgt een sticker in “Mijn uitvindingen”, en een naam als het kind dat wil</li>"),
+    ("<li>No reading or writing needed: Monko says everything. Calm mode, bigger targets and a break whenever a child wants one</li>",
+     "<li>Lezen en schrijven hoeft nooit: Monko zegt alles. Rustige stand, grotere doelen om op te tikken en een pauze wanneer het kind dat wil</li>"),
+    ('alt="Monko Quest on a tablet held sideways: a dotted path winds through a starry sky past five planets: a lavender one with a sleepy little alien, a blue one, a rust-red one, a green one with two leaves and a yellow one with a ring. Monko the rocket waits beside the first planet, and a big brown button at the bottom flies there."',
+     'alt="Monko Quest op een tablet in liggende stand: een stippelpad kronkelt door een sterrenhemel langs vijf planeten: een lila planeet met een slaperig buitenaardsje, een blauwe, een roestrode, een groene met twee blaadjes en een gele met een ring. Monko de raket wacht naast de eerste planeet, en met een grote bruine knop onderaan vlieg je erheen."'),
 
     # What beta means.
     ("<h3 id=\"beta-h\">What “beta” means</h3>", "<h3 id=\"beta-h\">Wat “bèta” betekent</h3>"),

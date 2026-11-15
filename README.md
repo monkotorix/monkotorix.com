@@ -74,13 +74,15 @@ still), and `prefers-reduced-motion` turns off even that.
 ./build-game.sh monko-letters
 ```
 
-**Monko Quest** ([monkotorix/monkoquest](https://github.com/monkotorix/monkoquest)) is not on the site
-until it is ready. It was published on 9 November 2026 and taken off the same day in the commit
-“Take Monko Quest off the site until it is ready”. To bring it back, revert that commit (it restores
-its panel in both languages, the footer link, its privacy sections, the sitemap entry, its
-screenshots and its Dutch pairs in `tools/make_dutch.py`), then run `./build-game.sh monko-quest`
-for the latest version and `python3 tools/make_dutch.py`. It is played sideways, so its panel uses
-the wide `.game-shot.wide` frame (still in the page’s styles) and a 960×667 screenshot.
+**Monko Math** (not on GitHub yet) and **Monko Quest** ([monkotorix/monkoquest](https://github.com/monkotorix/monkoquest))
+are shown as “Coming soon”: a panel with a screenshot and a description in both languages, an outlined
+`.badge-soon` badge and no play button. The games themselves are not on the site. Monko Quest was
+published on 9 November 2026 and taken off the same day in the commit “Take Monko Quest off the site until
+it is ready”. To put a game up for real, give its panel a play button and the `badge-beta` badge, add its
+footer link, privacy section and sitemap entry (that commit shows them for Monko Quest), run
+`./build-game.sh monko-quest` for the latest version and `python3 tools/make_dutch.py`. Both are played
+sideways, so their panels use the wide `.game-shot.wide` frame and a 960×667 screenshot of a 1180×820
+tablet; Monko Quest shows the word “Grown-ups” on screen, so the Dutch page has its own `monko-quest-nl.webp`.
 
 The script copies the sibling game checkout (or `$NEUROCREW_DIR` / `$MONKOREADS_DIR` / `$MONKOLETTERS_DIR` / `$MONKOQUEST_DIR`) to a temp
 dir, installs and builds it there, removes hosting files that only apply at a site root, adds the
