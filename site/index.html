@@ -307,10 +307,9 @@
     }
     .game-panel + .game-panel{margin-top:1.5rem}
     .game-panel.reversed{grid-template-columns:auto minmax(0,1fr)}
-    @media (max-width:47.9rem){
+    @media (max-width:60rem){
       .game-panel,.game-panel.reversed{grid-template-columns:minmax(0,1fr)}
-      .game-panel .game-shot{margin:0 auto}
-      .game-panel.reversed .game-shot{order:2}
+      .game-panel .game-shot{margin:0 auto;order:2}
     }
     .game-head{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .8rem}
     .game-panel h3{font-family:var(--font-display);font-variation-settings:"SOFT" 100;font-weight:650;font-size:clamp(1.8rem,3.6vw,2.4rem);line-height:1.1;letter-spacing:-.01em}
@@ -328,17 +327,12 @@
     .game-points li{position:relative;padding-left:1.4rem;font-size:.97rem}
     .game-points li::before{content:"✦";content:"✦" / "";position:absolute;left:0;top:.2em;color:var(--accent-text);font-size:.75rem;line-height:1.6}
     .game-actions{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.1rem}
+    /* Each screenshot sits in a tablet held on its side. */
     .game-shot{
-      width:min(15.5rem,68vw);border-radius:1.7rem;overflow:hidden;background:var(--surface);
+      width:min(25rem,76vw);border-radius:1.4rem;overflow:hidden;background:var(--surface);
       border:6px solid color-mix(in srgb,var(--text) 88%,transparent);box-shadow:var(--shadow-lg);
     }
     .game-shot img{width:100%;height:auto}
-    /* A game played sideways gets a tablet held on its side. */
-    .game-shot.wide{width:min(25rem,76vw);border-radius:1.4rem}
-    @media (max-width:60rem){
-      .game-panel.wide,.game-panel.wide.reversed{grid-template-columns:minmax(0,1fr)}
-      .game-panel.wide .game-shot{margin:0 auto;order:2}
-    }
     .beta-note{
       display:grid;gap:1rem;align-items:center;margin-top:1.5rem;padding:1.4rem 1.6rem;border-radius:var(--r-md);
       background:color-mix(in srgb,var(--a2) 9%,var(--surface));border:1px solid color-mix(in srgb,var(--a2) 35%,transparent);
@@ -549,13 +543,13 @@
             </div>
           </div>
           <div class="game-shot">
-            <img src="/assets/neurocrew.webp" width="640" height="1385" loading="lazy" decoding="async" alt="Monko Focus on a phone: Bear, the buddy, stands at the start of a magic path of picture stops — a bee on a trail, bubbles, a leaf for a breathing break, hands, cups and a basket of stars — that leads to a castle. A green edge round the screen shows it is the child’s turn.">
+            <img src="/assets/neurocrew.webp" width="960" height="667" loading="lazy" decoding="async" alt="Monko Focus on a tablet held sideways: Bear, the buddy, stands at the start of a magic path of picture stops — a row of dots to finish, a torch, a bee on a trail, a leaf for a breathing break, a little bear with its arms up, bubbles and two hands — that leads to a castle. A big brown button at the bottom plays the first game.">
           </div>
         </article>
 
         <article class="game-panel reversed" id="game-olli" aria-labelledby="olli-h">
           <div class="game-shot">
-            <img src="/assets/lezen-met-olli.webp" width="640" height="1385" loading="lazy" decoding="async" alt="Monko Reads on a phone: Olli the owl stands at the start of a winding path through Zonneweide, the first world, with the first three games — Letterbos, Ballonnen and Rijmen. In a speech bubble, Olli says hello and invites the child onto the magic path.">
+            <img src="/assets/lezen-met-olli.webp" width="960" height="667" loading="lazy" decoding="async" alt="Monko Reads on a tablet held sideways: Olli the owl stands at the start of a winding path through Sunny Meadow, the first world, with the first three games — Letter Forest, Balloons and Rhymes. In a speech bubble, Olli says hello and invites the child onto the magic path.">
           </div>
           <div>
             <div class="game-head"><h3 id="olli-h">Monko Reads</h3><span class="badge-beta">Beta</span></div>
@@ -593,7 +587,7 @@
             </div>
           </div>
           <div class="game-shot">
-            <img src="/assets/monko-letters.webp" width="640" height="1385" loading="lazy" decoding="async" alt="Monko Letters on a phone: the letter a, for “aap”, on a big writing pad. A finger has followed Stip the ladybird round the circle of the a in blue crayon, and Stip waits at the top of the down-stroke. Above the pad, Stip explains how to write the a.">
+            <img src="/assets/monko-letters.webp" width="960" height="667" loading="lazy" decoding="async" alt="Monko Letters on a tablet held sideways: the letter a, for “apple”, on a big writing pad. A finger has followed Stip the ladybird round the circle of the a in blue crayon, and Stip waits at the top of the down-stroke. Beside the pad, Stip explains how to write the a.">
           </div>
         </article>
 
@@ -605,8 +599,8 @@
           </div>
         </aside>
 
-        <article class="game-panel reversed wide soon" id="game-math" aria-labelledby="math-h">
-          <div class="game-shot wide">
+        <article class="game-panel reversed soon" id="game-math" aria-labelledby="math-h">
+          <div class="game-shot">
             <img src="/assets/monko-math.webp" width="960" height="667" loading="lazy" decoding="async" alt="Monko Math on a tablet held sideways: Apple crate. An apple tree full of red apples stands on the left. On the right, a big 3 sits above a crate with ten spaces, and one apple is already in it. Bear, the buddy, waits in the top corner, and a big brown button with a tick checks the answer.">
           </div>
           <div>
@@ -624,7 +618,7 @@
           </div>
         </article>
 
-        <article class="game-panel wide soon" id="game-quest" aria-labelledby="quest-h">
+        <article class="game-panel soon" id="game-quest" aria-labelledby="quest-h">
           <div>
             <div class="game-head"><h3 id="quest-h">Monko Quest</h3><span class="badge-soon">Coming soon</span></div>
             <p class="sub">Space puzzle game · <span class="nowrap">Ages 4–12</span></p>
@@ -638,7 +632,7 @@
               <li>In English and Dutch, on a tablet or computer held sideways</li>
             </ul>
           </div>
-          <div class="game-shot wide">
+          <div class="game-shot">
             <img src="/assets/monko-quest.webp" width="960" height="667" loading="lazy" decoding="async" alt="Monko Quest on a tablet held sideways: a dotted path winds through a starry sky past five planets: a lavender one with a sleepy little alien, a blue one, a rust-red one, a green one with two leaves and a yellow one with a ring. Monko the rocket waits beside the first planet, and a big brown button at the bottom flies there.">
           </div>
         </article>

@@ -58,7 +58,7 @@ The site sits between its two siblings:
 - **Light theme — "the cove by morning":** the Sofmon cove palette (cream, ink, sun, sea) and
   Sofmon's pill buttons and theme toggle.
 - **Dark theme — "the cove at night":** Stay Cove Studio's ink and gold, its letter-spaced rule
-  headings and game panels with a phone-framed screenshot.
+  headings and game panels with a screenshot in a tablet frame.
 
 All colours are CSS custom properties at the top of the `<style>` block in `index.html`; the six
 accent colours (`--a1` … `--a6`) paint the stops on the hero path and the circles of the "Our goal"
@@ -82,9 +82,11 @@ are shown as “Coming soon”: a panel with a screenshot and a description in b
 published on 9 November 2026 and taken off the same day in the commit “Take Monko Quest off the site until
 it is ready”. To put a game up for real, give its panel a play button and the `badge-beta` badge, add its
 footer link, privacy section and sitemap entry (that commit shows them for Monko Quest), run
-`./build-game.sh monko-quest` for the latest version and `python3 tools/make_dutch.py`. Both are played
-sideways, so their panels use the wide `.game-shot.wide` frame and a 960×667 screenshot of a 1180×820
-tablet; Monko Quest shows the word “Grown-ups” on screen, so the Dutch page has its own `monko-quest-nl.webp`.
+`./build-game.sh monko-quest` for the latest version and `python3 tools/make_dutch.py`.
+
+Every game panel shows the game on a tablet held sideways: a 960×667 screenshot of the game at
+1180×820 (taken at 2× and scaled down) in the `.game-shot` frame. Below 60rem the panel stacks with the
+screenshot under the text.
 
 The script copies the sibling game checkout (or `$NEUROCREW_DIR` / `$MONKOREADS_DIR` / `$MONKOLETTERS_DIR` / `$MONKOQUEST_DIR`) to a temp
 dir, installs and builds it there, removes hosting files that only apply at a site root, adds the
@@ -123,7 +125,8 @@ games' own Dutch names for what parents see in them (*Volwassenenhoek*, *Profiel
 *Geluid en stem*, *Rustige stand*…), informal *je*, and *spelletjes* for the games.
 
 The Dutch home page shows Dutch screenshots where the English ones contain English words
-(`neurocrew-nl.webp`) and its own social-preview image (`og-nl.jpg`). The
+(`lezen-met-olli-nl.webp`, `monko-letters-nl.webp`, `monko-quest-nl.webp`) and its own social-preview
+image (`og-nl.jpg`). Monko Focus has no words on its map, so both pages share `neurocrew.webp`. The
 404 page is shared, so it says everything in both languages, and `site.js` gives the theme switch a
 Dutch tooltip on pages with `lang="nl"`.
 

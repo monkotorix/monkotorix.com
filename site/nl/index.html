@@ -307,10 +307,9 @@
     }
     .game-panel + .game-panel{margin-top:1.5rem}
     .game-panel.reversed{grid-template-columns:auto minmax(0,1fr)}
-    @media (max-width:47.9rem){
+    @media (max-width:60rem){
       .game-panel,.game-panel.reversed{grid-template-columns:minmax(0,1fr)}
-      .game-panel .game-shot{margin:0 auto}
-      .game-panel.reversed .game-shot{order:2}
+      .game-panel .game-shot{margin:0 auto;order:2}
     }
     .game-head{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .8rem}
     .game-panel h3{font-family:var(--font-display);font-variation-settings:"SOFT" 100;font-weight:650;font-size:clamp(1.8rem,3.6vw,2.4rem);line-height:1.1;letter-spacing:-.01em}
@@ -328,17 +327,12 @@
     .game-points li{position:relative;padding-left:1.4rem;font-size:.97rem}
     .game-points li::before{content:"✦";content:"✦" / "";position:absolute;left:0;top:.2em;color:var(--accent-text);font-size:.75rem;line-height:1.6}
     .game-actions{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1.1rem}
+    /* Each screenshot sits in a tablet held on its side. */
     .game-shot{
-      width:min(15.5rem,68vw);border-radius:1.7rem;overflow:hidden;background:var(--surface);
+      width:min(25rem,76vw);border-radius:1.4rem;overflow:hidden;background:var(--surface);
       border:6px solid color-mix(in srgb,var(--text) 88%,transparent);box-shadow:var(--shadow-lg);
     }
     .game-shot img{width:100%;height:auto}
-    /* A game played sideways gets a tablet held on its side. */
-    .game-shot.wide{width:min(25rem,76vw);border-radius:1.4rem}
-    @media (max-width:60rem){
-      .game-panel.wide,.game-panel.wide.reversed{grid-template-columns:minmax(0,1fr)}
-      .game-panel.wide .game-shot{margin:0 auto;order:2}
-    }
     .beta-note{
       display:grid;gap:1rem;align-items:center;margin-top:1.5rem;padding:1.4rem 1.6rem;border-radius:var(--r-md);
       background:color-mix(in srgb,var(--a2) 9%,var(--surface));border:1px solid color-mix(in srgb,var(--a2) 35%,transparent);
@@ -549,13 +543,13 @@
             </div>
           </div>
           <div class="game-shot">
-            <img src="/assets/neurocrew-nl.webp" width="640" height="1385" loading="lazy" decoding="async" alt="Monko Focus op een telefoon: Beer, het maatje, staat aan het begin van een toverpad met plaatjes — een bij op een spoor, bellen, een blaadje voor een adempauze, handen, bekers en een mandje met sterren — dat naar een kasteel leidt. Een groene rand om het scherm laat zien dat het kind aan de beurt is.">
+            <img src="/assets/neurocrew.webp" width="960" height="667" loading="lazy" decoding="async" alt="Monko Focus op een tablet in liggende stand: Beer, het maatje, staat aan het begin van een toverpad met plaatjes — een rij stippen om af te maken, een zaklamp, een bij op een spoor, een blaadje voor een adempauze, een beertje met de armen omhoog, bellen en twee handen — dat naar een kasteel leidt. Met de grote bruine knop onderaan speel je het eerste spelletje.">
           </div>
         </article>
 
         <article class="game-panel reversed" id="game-olli" aria-labelledby="olli-h">
           <div class="game-shot">
-            <img src="/assets/lezen-met-olli.webp" width="640" height="1385" loading="lazy" decoding="async" alt="Monko Reads op een telefoon: Olli de uil staat aan het begin van een kronkelpad door Zonneweide, de eerste wereld, met de eerste drie spelletjes — Letterbos, Ballonnen en Rijmen. In een tekstballon zegt Olli hallo en nodigt hij het kind uit om mee te gaan over het toverpad.">
+            <img src="/assets/lezen-met-olli-nl.webp" width="960" height="667" loading="lazy" decoding="async" alt="Monko Reads op een tablet in liggende stand: Olli de uil staat aan het begin van een kronkelpad door Zonneweide, de eerste wereld, met de eerste drie spelletjes — Letterbos, Ballonnen en Rijmen. In een tekstballon zegt Olli hallo en nodigt hij het kind uit om mee te gaan over het toverpad.">
           </div>
           <div>
             <div class="game-head"><h3 id="olli-h">Monko Reads</h3><span class="badge-beta">Bèta</span></div>
@@ -593,7 +587,7 @@
             </div>
           </div>
           <div class="game-shot">
-            <img src="/assets/monko-letters.webp" width="640" height="1385" loading="lazy" decoding="async" alt="Monko Letters op een telefoon: de letter a, van “aap”, op een groot schrijfvlak. Een vinger is Stip het lieveheersbeestje met blauw krijt gevolgd over het rondje van de a, en Stip wacht bovenaan het stokje. Boven het schrijfvlak legt Stip uit hoe je de a schrijft.">
+            <img src="/assets/monko-letters-nl.webp" width="960" height="667" loading="lazy" decoding="async" alt="Monko Letters op een tablet in liggende stand: de letter a, van “aap”, op een groot schrijfvlak. Een vinger is Stip het lieveheersbeestje met blauw krijt gevolgd over het rondje van de a, en Stip wacht bovenaan het stokje. Naast het schrijfvlak legt Stip uit hoe je de a schrijft.">
           </div>
         </article>
 
@@ -605,8 +599,8 @@
           </div>
         </aside>
 
-        <article class="game-panel reversed wide soon" id="game-math" aria-labelledby="math-h">
-          <div class="game-shot wide">
+        <article class="game-panel reversed soon" id="game-math" aria-labelledby="math-h">
+          <div class="game-shot">
             <img src="/assets/monko-math.webp" width="960" height="667" loading="lazy" decoding="async" alt="Monko Math op een tablet in liggende stand: Appelkrat. Links staat een appelboom vol rode appels. Rechts staat een grote 3 boven een krat met tien vakjes, waar al één appel in ligt. Beer, het maatje, wacht in de bovenhoek, en met een grote bruine knop met een vinkje controleer je het antwoord.">
           </div>
           <div>
@@ -624,7 +618,7 @@
           </div>
         </article>
 
-        <article class="game-panel wide soon" id="game-quest" aria-labelledby="quest-h">
+        <article class="game-panel soon" id="game-quest" aria-labelledby="quest-h">
           <div>
             <div class="game-head"><h3 id="quest-h">Monko Quest</h3><span class="badge-soon">Binnenkort</span></div>
             <p class="sub">Puzzelspel in de ruimte · <span class="nowrap">4–12 jaar</span></p>
@@ -638,7 +632,7 @@
               <li>In het Nederlands en het Engels, op een tablet in liggende stand of op een computer</li>
             </ul>
           </div>
-          <div class="game-shot wide">
+          <div class="game-shot">
             <img src="/assets/monko-quest-nl.webp" width="960" height="667" loading="lazy" decoding="async" alt="Monko Quest op een tablet in liggende stand: een stippelpad kronkelt door een sterrenhemel langs vijf planeten: een lila planeet met een slaperig buitenaardsje, een blauwe, een roestrode, een groene met twee blaadjes en een gele met een ring. Monko de raket wacht naast de eerste planeet, en met een grote bruine knop onderaan vlieg je erheen.">
           </div>
         </article>

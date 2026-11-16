@@ -43,7 +43,8 @@ HOME = [
     ('<a href="/privacy/">Privacy</a>\n      <a href="/nl/" hreflang="nl" lang="nl">Nederlands</a>',
      '<a href="/nl/privacy/">Privacy</a>\n      <a href="/" hreflang="en" lang="en">English</a>'),
     # Screenshots of the games in Dutch where the English one shows English words.
-    ('src="/assets/neurocrew.webp"', 'src="/assets/neurocrew-nl.webp"'),
+    ('src="/assets/lezen-met-olli.webp"', 'src="/assets/lezen-met-olli-nl.webp"'),
+    ('src="/assets/monko-letters.webp"', 'src="/assets/monko-letters-nl.webp"'),
     ('src="/assets/monko-quest.webp"', 'src="/assets/monko-quest-nl.webp"'),
 
     # Head.
@@ -124,12 +125,12 @@ HOME = [
      "<li>Bij elk spelletje een “Probeer het echt”-idee in de volwassenenhoek, om samen zonder scherm te spelen</li>"),
     ("<li>In English, Dutch, French, Bulgarian and Spanish</li>", "<li>In het Nederlands, het Engels, het Frans, het Bulgaars en het Spaans</li>"),
     ("Play Monko Focus</a>", "Speel Monko Focus</a>"),
-    ('alt="Monko Focus on a phone: Bear, the buddy, stands at the start of a magic path of picture stops — a bee on a trail, bubbles, a leaf for a breathing break, hands, cups and a basket of stars — that leads to a castle. A green edge round the screen shows it is the child’s turn."',
-     'alt="Monko Focus op een telefoon: Beer, het maatje, staat aan het begin van een toverpad met plaatjes — een bij op een spoor, bellen, een blaadje voor een adempauze, handen, bekers en een mandje met sterren — dat naar een kasteel leidt. Een groene rand om het scherm laat zien dat het kind aan de beurt is."'),
+    ('alt="Monko Focus on a tablet held sideways: Bear, the buddy, stands at the start of a magic path of picture stops — a row of dots to finish, a torch, a bee on a trail, a leaf for a breathing break, a little bear with its arms up, bubbles and two hands — that leads to a castle. A big brown button at the bottom plays the first game."',
+     'alt="Monko Focus op een tablet in liggende stand: Beer, het maatje, staat aan het begin van een toverpad met plaatjes — een rij stippen om af te maken, een zaklamp, een bij op een spoor, een blaadje voor een adempauze, een beertje met de armen omhoog, bellen en twee handen — dat naar een kasteel leidt. Met de grote bruine knop onderaan speel je het eerste spelletje."'),
 
     # Monko Reads.
-    ('alt="Monko Reads on a phone: Olli the owl stands at the start of a winding path through Zonneweide, the first world, with the first three games — Letterbos, Ballonnen and Rijmen. In a speech bubble, Olli says hello and invites the child onto the magic path."',
-     'alt="Monko Reads op een telefoon: Olli de uil staat aan het begin van een kronkelpad door Zonneweide, de eerste wereld, met de eerste drie spelletjes — Letterbos, Ballonnen en Rijmen. In een tekstballon zegt Olli hallo en nodigt hij het kind uit om mee te gaan over het toverpad."'),
+    ('alt="Monko Reads on a tablet held sideways: Olli the owl stands at the start of a winding path through Sunny Meadow, the first world, with the first three games — Letter Forest, Balloons and Rhymes. In a speech bubble, Olli says hello and invites the child onto the magic path."',
+     'alt="Monko Reads op een tablet in liggende stand: Olli de uil staat aan het begin van een kronkelpad door Zonneweide, de eerste wereld, met de eerste drie spelletjes — Letterbos, Ballonnen en Rijmen. In een tekstballon zegt Olli hallo en nodigt hij het kind uit om mee te gaan over het toverpad."'),
     ('<p class="sub">Letters &amp; words game · <span class="nowrap">Ages 5–8</span></p>',
      '<p class="sub">Letter- en woordspel · <span class="nowrap">5–8 jaar</span></p>'),
     ("A cheerful game full of letters, sounds and words, in Dutch or English. Olli the owl walks children along a magic path through four worlds of short games — find the letter, pop the right balloon, spot the rhyme, build the word — and reads the instructions aloud.",
@@ -161,8 +162,8 @@ HOME = [
     ("<li>In Dutch and English. The joined letters follow a general Dutch style, so a few may look a little different from the ones taught at school</li>",
      "<li>In het Nederlands en het Engels. De schrijfletters volgen een algemene Nederlandse stijl, dus een paar letters kunnen er net iets anders uitzien dan de letters die je kind op school leert</li>"),
     ("Play Monko Letters</a>", "Speel Monko Letters</a>"),
-    ('alt="Monko Letters on a phone: the letter a, for “aap”, on a big writing pad. A finger has followed Stip the ladybird round the circle of the a in blue crayon, and Stip waits at the top of the down-stroke. Above the pad, Stip explains how to write the a."',
-     'alt="Monko Letters op een telefoon: de letter a, van “aap”, op een groot schrijfvlak. Een vinger is Stip het lieveheersbeestje met blauw krijt gevolgd over het rondje van de a, en Stip wacht bovenaan het stokje. Boven het schrijfvlak legt Stip uit hoe je de a schrijft."'),
+    ('alt="Monko Letters on a tablet held sideways: the letter a, for “apple”, on a big writing pad. A finger has followed Stip the ladybird round the circle of the a in blue crayon, and Stip waits at the top of the down-stroke. Beside the pad, Stip explains how to write the a."',
+     'alt="Monko Letters op een tablet in liggende stand: de letter a, van “aap”, op een groot schrijfvlak. Een vinger is Stip het lieveheersbeestje met blauw krijt gevolgd over het rondje van de a, en Stip wacht bovenaan het stokje. Naast het schrijfvlak legt Stip uit hoe je de a schrijft."'),
 
     # Coming soon: Monko Math and Monko Quest (no play button yet).
     ('<span class="badge-soon">Coming soon</span>', '<span class="badge-soon">Binnenkort</span>', 2),
